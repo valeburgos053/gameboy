@@ -11,5 +11,7 @@ server.listen(3000, () => {
 });
 
 io.on("connection", (socket) => {
-  console.log("Nueva conexion", socket);
+  console.log("Nueva conexion")
+  socket.emit("Mensaje desde el backend");
+  socket.on("Mensaje custom", () => console.log("Mensaje custom recibido"))
 })
