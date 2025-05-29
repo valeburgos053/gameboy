@@ -1,5 +1,11 @@
 @use "./../../../../public/colors.scss";
 
+#container {
+  pointer-events: none;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
 #d-pad-container{
   $tamaño-d-pad: 100px;
   $padding: 4px;
@@ -21,16 +27,12 @@
     }
   }
 }
-.boton-redondo {
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: colors.$accent-2;
-    width: 36px;
+
+#x-o-container {
+    translate: 10 40px;
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
-    span {
-      translate: 0 35;
-   }
+    justify-content: flex-end;
 }
 
 #x-o-borde-container {
@@ -41,5 +43,62 @@
     border-radius: 2rem;
     padding: 7px;
     rotate: -45deg; // Puedes quitar esta línea si no quieres inclinación
-    width: 120px;
+    width: 110px;
+}
+
+.boton-redondo {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: colors.$accent-2;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    span {
+      translate: 0 40px;
+   }
+}
+
+#botones-start-container {
+  margin: auto;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px; // Reduce el espacio entre los elementos
+  translate: -25px 0; // Mueve ligeramente a la izquierda
+  div {
+    translate: 0 0; // Centrado real
+    margin: 0;
+    width: 70px; // Reduce el ancho para que estén más juntos
+    background-color: gray; // Relleno de color gris
+  }
+}
+
+.boton-alargado {
+  width: 80px;
+  height: 10px;
+  margin: 10px;
+  rotate: -45deg;
+  border-radius: 2rem;
+  border: 1px solid colors.$primary;
+  display: flex;
+  justify-content: center;
+  span {
+    translate: 0 20px;
+    font-size: smaller;
+    font-weight: bold;
+  }
+}
+
+#parlante-container {
+  width: 80px;
+  rotate: 45deg;
+  margin-left: auto;
+  margin-top: auto;
+  div {
+    aspect-ratio: 9;
+    margin: 8px;
+    border-radius: 2rem;
+    border: 1px solid colors.$primary;
+  }
 }
