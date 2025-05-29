@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,5 +6,5 @@ import { Injectable } from '@angular/core';
 export class UsuarioService {
 
   constructor() { }
-  nombre = " Valeria";
+  nombre = signal<string>("");
 }
