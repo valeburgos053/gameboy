@@ -1,0 +1,45 @@
+@use "./../../../../public/colors.scss";
+
+#d-pad-container{
+  $tamaño-d-pad: 100px;
+  $padding: 4px;
+  position: relative;
+  border: 1px solid colors.$accent-1-contrast;
+  width: $tamaño-d-pad;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: $padding;
+  > div {
+    $ancho-cruz: 20px;
+    position: absolute;
+    width: $ancho-cruz;
+    background-color: colors.$primary;
+    height: $tamaño-d-pad;
+    left: calc($tamaño-d-pad / 2) - ($ancho-cruz / 2) + $padding ;
+    &:last-child{
+    rotate: 90deg;
+    }
+  }
+}
+.boton-redondo {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: colors.$accent-2;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    span {
+      translate: 0 35;
+   }
+}
+
+#x-o-borde-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border: 3.5px solid colors.$accent-1-contrast;
+    border-radius: 2rem;
+    padding: 7px;
+    rotate: -45deg; // Puedes quitar esta línea si no quieres inclinación
+    width: 120px;
+}
