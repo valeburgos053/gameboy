@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gameboy": {
+    "ta-te-ti-online-en-vivo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/gameboy",
+            "outputPath": "dist/ta-te-ti-online-en-vivo",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -46,8 +46,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
                 }
               ],
               "outputHashing": "all"
@@ -55,7 +55,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -64,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "gameboy:build:production"
+              "buildTarget": "ta-te-ti-online-en-vivo:build:production"
             },
             "development": {
-              "buildTarget": "gameboy:build:development"
+              "buildTarget": "ta-te-ti-online-en-vivo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +94,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.scss"
@@ -100,6 +107,6 @@
     }
   },
   "cli": {
-    "analytics": "a15dfdde-5ce0-4fb1-9ba5-78e874be6323"
+    "analytics": "e14d7731-f252-48af-83a2-32644c33a47b"
   }
 }

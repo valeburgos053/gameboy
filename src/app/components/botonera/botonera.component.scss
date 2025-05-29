@@ -1,114 +1,93 @@
 @use "./../../../../public/colors.scss";
-
-#container {
+#container{
   pointer-events: none;
   justify-content: space-between;
   padding: 50px 0;
 }
 
-#botones-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 3px;
-}
-
-#d-pad-container {
+#d-pad-container{
   $tamaño-d-pad: 100px;
   $padding: 4px;
   position: relative;
-  border: 3.5px solid colors.$accent-1-contrast;
+  border: 1.5px solid colors.$accent-1-contrast;
   width: $tamaño-d-pad;
   aspect-ratio: 1;
   border-radius: 50%;
   padding: $padding;
-  > div {
+  >div{
     $ancho-cruz: 20px;
     position: absolute;
     width: $ancho-cruz;
     background-color: colors.$primary;
     height: $tamaño-d-pad;
-    left: calc(($tamaño-d-pad / 2) - ($ancho-cruz / 2) + $padding);
-    &:last-child {
+    left: calc($tamaño-d-pad / 2 - $ancho-cruz / 2 + $padding);
+    &:last-child{
       rotate: 90deg;
     }
   }
 }
 
-#x-o-container {
-    translate: 10 40px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: flex-end;
+
+#x-o-container{
+  translate: 0 40px;
+}
+
+#x-o-borde-container{
+  border: 1.5px solid colors.$accent-1-contrast;
+  border-radius: 2rem;
+  padding: 5px;
+  rotate: -45deg;
+  width: 110px;
+}
+
+.boton-redondo{
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: colors.$accent-2;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  span{
+    translate: 0 40px;
   }
-  
-  #x-o-borde-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    border: 3.5px solid colors.$accent-1-contrast;
-    border-radius: 2rem;
-    padding: 7px;
-    rotate: -45deg; // Puedes quitar esta línea si no quieres inclinación
-    width: 120px;
-  }
-  
-  .boton-redondo {
-    width: 36px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: colors.$accent-2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    span {
-      translate: 0 0; // <--- CAMBIO AQUÍ: centrado real del texto
-      font-weight: bold;
-      font-size: 16px; // Opcional, si quieres que se vea más claro
-    }
-  }
-  
-#botones-start-container {
+}
+
+#botones-start-container{
   margin: auto;
   height: 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1px; // Reduce el espacio entre los elementos
-  translate: -20
-  px 0; // Mueve ligeramente a la izquierda
-  div {
-    translate: 0 0; // Centrado real
+  div{
+    translate: 0 40px;
     margin: 0;
-    width: 70px; // Reduce el ancho para que estén más juntos
-    background-color: gray; // Relleno de color gris
   }
 }
 
-.boton-alargado {
+.boton-alargado{
   width: 80px;
   height: 10px;
   margin: 10px;
   rotate: -35deg;
   border-radius: 2rem;
-  border: 2.5px solid colors.$primary;
+  border: 1.5px solid colors.$primary;
   display: flex;
   justify-content: center;
-  span {
+  span{
     translate: 0 14px;
     font-size: smaller;
     font-weight: bold;
   }
 }
 
-#parlante-container {
+#parlante-container{
   width: 80px;
   rotate: 45deg;
   margin-left: auto;
   margin-top: auto;
-  div {
+  div{
     aspect-ratio: 9;
     margin: 8px;
     border-radius: 2rem;
-    border: 2.5px solid colors.$primary;
+    border: 1.5px solid colors.$primary;
   }
 }

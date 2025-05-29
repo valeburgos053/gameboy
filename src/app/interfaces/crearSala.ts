@@ -1,4 +1,4 @@
 export interface CrearSalaArgs {
-    publica: boolean,
-    nombreJugador: string,
+  publica: boolean,
+  nombreJugador: string
 }
