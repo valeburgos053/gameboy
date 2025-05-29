@@ -2,16 +2,19 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { JugarComponent } from './pages/jugar/jugar.component';
 import { CambiarNombreComponent } from './page/cambiar-nombre/cambiar-nombre.component';
+import { necesitaNombreGuard } from './guards/necesita-nombre.guard';
 
 export const routes: Routes = [
 
     {
         path: "",
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate: [necesitaNombreGuard]
     },
     {
         path: "jugar",
-        component: JugarComponent
+        component: JugarComponent,
+        canActivate: [necesitaNombreGuard]
     },
     {
         path: "cambiar-nombre",

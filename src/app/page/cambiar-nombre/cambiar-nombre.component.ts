@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cambiar-nombre',
@@ -10,9 +10,13 @@ import { RouterModule } from '@angular/router';
   styleUrl: './cambiar-nombre.component.scss'
 })
 export class CambiarNombreComponent {
+
     usuarioService = inject(UsuarioService);
-    cambiarNombre(nuevoNombre: string) {
+    router = inject(Router);
+
+    cambiarNombreYVolver(nuevoNombre: string) {
       this.usuarioService.nombre.set(nuevoNombre);
+      this.router.navigate(["/"]);
 
     }
 }
