@@ -1,9 +1,7 @@
 
-<form (ngSubmit)="cambiarNombre(nombre.value)" #form="ngForm">
+<form (ngSubmit)="cambiarNombreYVolver(nombre.value)" #form="ngForm">
     <label for="nombre">Escribir nombre:</label>
   <input type="text" id="nombre" name="nombre" #nombre required ngModel>
   <button [disabled]="form.invalid">Cambiar nombre</button>
 </form>
 <a [routerLink]="['/']" class="boton">Volver</a>
-
-<h2> {{usuarioService.nombre()}}</h2>
