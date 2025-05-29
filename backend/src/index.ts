@@ -11,7 +11,7 @@ const io = new Server(server,{cors:{origin:"*"}});
 global.io = io;
 config();
 
-const puerto = process.env['PORT'] || 3000;
+const puerto = process.env.PORT || 3000;
 server.listen(puerto, ()=> {
   console.log("Server escuchando en el puerto", puerto);
 })
