@@ -1,9 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cambiar-nombre',
-  imports: [],
+  imports: [FormsModule, RouterModule],
   templateUrl: './cambiar-nombre.component.html',
   styleUrl: './cambiar-nombre.component.scss'
 })
