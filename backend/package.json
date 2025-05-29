@@ -9,8 +9,9 @@
     "build": "tsc --build",
     "tsc": "tsc",
     "install-build": "npm install && npm run build"
+
   },
-  "author": "Gonzalo Bechara Baladi",
+  "author": "Gonzalito",
   "license": "ISC",
   "devDependencies": {
     "@types/dotenv": "^8.2.3",
