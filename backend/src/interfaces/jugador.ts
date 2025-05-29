@@ -1,5 +1,5 @@
 export interface Jugador {
-  nombre: "",
+  nombre: string,
 }
 
 export const JUGADOR_VACIO:Jugador = {

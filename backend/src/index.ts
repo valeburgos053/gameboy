@@ -30,3 +30,14 @@ function buscarSalaPublica(callback: Function){
   })
   callback(salaDisponible ? salaDisponible.id : null);
 }
+
+function crearSala(socket:Socket, callback: Function, args: CrearSalaArgs){
+  const nuevaSala = new Sala(args)
+  nuevaSala.id = idProximaSala;
+  idProximaSala++;
+  salas.push(nuevaSala);
+  unirseASala(socket,callback,{
+    id: nuevaSala.id,
+    nombreJugador: args.nombreJugador
+  })
+}
