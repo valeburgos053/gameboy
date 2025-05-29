@@ -13,7 +13,7 @@ const server = (0, node_http_1.createServer)(app);
 const io = new socket_io_1.Server(server, { cors: { origin: "*" } });
 global.io = io;
 (0, dotenv_1.config)();
-const puerto = process.env['PORT'] || 3000;
+const puerto = process.env.PORT || 3000;
 server.listen(puerto, () => {
     console.log("Server escuchando en el puerto", puerto);
 });
